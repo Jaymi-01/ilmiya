@@ -1,5 +1,6 @@
 // src/pages/About.jsx
 import Header from '../components/Header';
+import { FaCheckCircle } from 'react-icons/fa'; // Importing a suitable icon
 
 const About = () => {
   return (
@@ -36,14 +37,37 @@ const About = () => {
           </div>
         </section>
 
-        {/* --- General Information --- */}
+        {/* --- Why Choose ilmiya? (Fixes Mobile Alignment) --- */}
         <section className="max-w-4xl mx-auto mt-12 pt-6 border-t border-gray-200">
-            <h2 className="text-3xl font-bold text-indigo-800 mb-4 text-center">Why Choose ilmiya?</h2>
-            <ul className="list-disc list-inside space-y-3 text-lg text-gray-700 mx-auto max-w-2xl">
-                <li>**Mobile-First Design:** Learn effectively on any device, anywhere.</li>
-                <li>**Practical Courses:** Focus on skills immediately applicable in the workforce.</li>
-                <li>**Community Focused:** Connect with peers and mentors for shared growth.</li>
-            </ul>
+            <h2 className="text-3xl font-bold text-indigo-800 mb-6 text-center">Why Choose ilmiya?</h2>
+            
+            <div className="space-y-4 mx-auto max-w-2xl">
+                
+                {/* Reason 1: Mobile-First Design */}
+                <div className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-md">
+                    <FaCheckCircle className="text-xl text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-lg text-gray-700 text-left">
+                        <span className="font-semibold">Mobile-First Design:</span> Learn effectively on any device, anywhere, ensuring a seamless experience whether you use a phone, tablet, or desktop.
+                    </p>
+                </div>
+                
+                {/* Reason 2: Practical Courses */}
+                <div className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-md">
+                    <FaCheckCircle className="text-xl text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-lg text-gray-700 text-left">
+                        <span className="font-semibold">Practical Courses:</span> Our curriculum focuses on skills immediately applicable in the workforce, turning theory into real-world capability.
+                    </p>
+                </div>
+                
+                {/* Reason 3: Community Focused */}
+                <div className="flex items-start space-x-3 p-3 bg-white rounded-lg shadow-md">
+                    <FaCheckCircle className="text-xl text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-lg text-gray-700 text-left">
+                        <span className="font-semibold">Community Focused:</span> Connect with peers and mentors through our platform for shared growth, feedback, and support.
+                    </p>
+                </div>
+
+            </div>
         </section>
 
       </main>
